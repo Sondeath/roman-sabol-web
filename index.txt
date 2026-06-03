@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk" xml:lang="sk"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="sk">
+	<title>Roman Sabol - čistenie áut, renovácia svetiel</title>
+	<meta name="description" content="Kompletné čistiace služby pre vaše auto: vysávanie, tepovanie, leštenie karosérie, okien, svetiel, renovácia reflektorov, zatieranie rýh a škrabancov.">
+	<meta name="keywords" content="automobily, autá, auto, auta, vozidla, vozidlo, čistenie, čistota, umývanie, služby, autoumyváreň, interiér, leštenie, karoséria, karosérie, karosérií, rohožky, rohože, čalúnenie, čalúnenia, batožinový priestor, batožinového priestoru, sedadlo, sedadlá, vysávanie, palubná doska, prahy, stĺpiky, slnečné clony, leštenie, okien, svetiel, renovácia reflektorov, tekuté stierače, klimatizácia, clay, meranie, hrúbka laku, hrúbky laku, poradenstvo, kúpa auta">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
+	<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+</head>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+	<a href="?id=cover">
+		<h1>Roman Sabol - čistenie áut, renovácia svetiel</h1>
+	</a>
+</div>
+
+<div id="menu">
+
+<script type="text/javascript">
+var sc_project=9259293;
+var sc_invisible=1;
+var sc_security="3a885698";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script><script type="text/javascript" src="https://secure.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9259293/0/3a885698/1/"
+alt="web counter"></a></div></noscript>
+
+<p class="current long" style="text-align:center;">
+<a href="?id=lights">Renovácia svetiel</a> | <a href="?id=scratch">Zatieranie rýh a odrenín</a> | <a href="?id=car">Čistenie auta</a> | <a href="?id=clima">Čistenie klimatizácie</a> | <a href="?id=wipes">Tekuté stierače</a><br><a href="?id=shine">Leštenie karosérie</a> | <a href="?id=wax">Voskovanie karosérie</a> | <a href="?id=plasticparts">Vonkajšie plasty</a> | <a href="?id=ozone">Ozónové čistenie - dezinfekcia interiéru</a><br><a href="?id=clay">Čistenie karosérie CLAY prípravkom</a> | <a href="?id=ceramic">Keramická ochrana laku</a> | <a href="?id=scratchsurf">Odstraňovanie povrchových škrabancov</a><br><a href="?id=asfalt">Odstraňovanie asfaltu a živice</a> | <a href="?id=plastidip">PlastiDip</a> | <a href="?id=width">Meranie hrúbky laku</a><br><a href="?id=advice">Poradenstvo pri kúpe jazdeného auta</a> | <a href="?id=veteran">Údržba veteránov</a><br><a href="?id=lightsgal">Galéria - renovácia svetiel</a> | <a href="?id=scratchgal">Galéria - zatieranie rýh a odrenín</a> | <a href="?id=shinegal">Galéria - leštenie karosérie</a><br><a href="?id=pricelist">Cenník</a> | <a href="?id=contact">Kontakt</a></p>
+
+</div>
+
+<div id="main">
+<ul>
+<li>NA TRHU OD ROKU 1999</li>
+<li>VÄČŠIE VOZIDLÁ BEZ PRÍPLATKU</li>
+<li>VZDIALENOSŤ cca 2,5 KM OD POLUSU</li>
+<li>MOŽNOSŤ VYZDVIHNUTIA ČISTÉHO VOZIDLA  AŽ DO 5 DNÍ</li> 
+<li>PO DOHODE PRÁCA AJ CEZ VÍKEND</li>
+<li>VOSKOVANIE KAROSÉRIÍ</li>
+<li>RENOVÁCIA PLASTOVÝCH SVETIEL VŠETKÝCH TYPOV</li>
+<li>OZÓNOVÉ ČISTENIE (DEZINFEKCIA INTERIÉRU)</li>
+<li>PORADENSTVO PRI KÚPE JAZDENÉHO AUTA</li>
+</ul>
+<table style="text-align:center;"><tbody><tr><td><img src="pic/cover/000_s.jpg"></td></tr><tr><td><img src="pic/cover/001_s.jpg"></td></tr><tr><td><img src="pic/cover/002_s.jpg"></td></tr><tr><td><img src="pic/cover/003_s.jpg"></td></tr><tr><td><img src="pic/cover/004_s.jpg"></td></tr><tr><td><img src="pic/cover/005_s.jpg"></td></tr><tr><td><img src="pic/cover/006_s.jpg"></td></tr></tbody></table></div>
+
+
+<div id="footer">
+	<p>mobil: 0903 379 976</p>
+</div>
+
+</div>
+
+
+
+
+</body></html>
