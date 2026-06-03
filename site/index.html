@@ -4,477 +4,218 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
-<title>Roman Sabol — Detailing áut & Renovácia svetiel | Bratislava od 1999</title>
-<meta name="description" content="Profesionálny detailing áut, renovácia svetlometov, leštenie laku, keramická ochrana a ozónová dezinfekcia. Bratislava, 2,5 km od OC Polus. Od roku 1999." />
+<title>Roman Sabol — Renovácia svetiel & Autodetailing | Bratislava od 1999</title>
+<meta name="description" content="Renovácia zožltnutých svetlometov, leštenie laku, keramická ochrana a kompletný detailing áut v Bratislave. Od roku 1999. Aj prémiové vozidlá." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- Top bar -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <span>📍 Bratislava — 2,5 km od OC Polus</span>
-    <span class="topbar-sep">·</span>
-    <span>🕐 Po–Pia 8:00–18:00 · Víkend po dohode</span>
-    <a href="tel:+421903379976" class="topbar-phone">☎ 0903 379 976</a>
-  </div>
-</div>
-
-<!-- Nav -->
+<!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <div class="nav-inner">
+  <div class="wrap nav-inner">
     <a href="#top" class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 40 40" width="36" height="36"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="20" y="26" text-anchor="middle" font-family="Bebas Neue" font-size="18" fill="currentColor">RS</text></svg>
-      </div>
-      <div class="brand-text">
-        <strong>Roman Sabol</strong>
-        <small>Autodetailing · od 1999</small>
-      </div>
+      <span class="brand-rs">RS</span>
+      <span class="brand-name">Roman&nbsp;Sabol</span>
     </a>
-    <nav class="nav-links">
-      <a href="#postup">Postup</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#showcase">Práca</a>
       <a href="#sluzby">Služby</a>
-      <a href="#galeria">Pred / Po</a>
-      <a href="#cennik">Cenník</a>
-      <a href="#roman">O Romanovi</a>
-      <a href="#kontakt" class="nav-cta">Objednať</a>
+      <a href="#preco">Prečo my</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="tel:+421903379976" class="nav-phone">0903&nbsp;379&nbsp;976</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
-<!-- HERO -->
 <main id="top">
+
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-grid">
-    <div class="hero-left">
-      <div class="hero-meta">
-        <span class="dot"></span>
-        Špecializácia: renovácia svetlometov
-      </div>
-      <h1>
-        Vrátime vášmu autu<br>
-        <span class="hl">jasný pohľad</span>
-        <span class="hl-sub">na cestu.</span>
-      </h1>
-      <p class="hero-lead">
-        Žlté, zmatnené alebo poškriabané svetlomety renovujeme do tovární­ckej kondície.
-        Bezpečnejšia jazda v noci. Lepší výzor auta. Bez nutnosti meniť svetlá za nové.
-      </p>
-
-      <div class="hero-actions">
-        <a href="tel:+421903379976" class="btn btn-dark">
-          <span>Zavolať a dohodnúť termín</span>
-          <strong>0903 379 976</strong>
-        </a>
-        <a href="#sluzby" class="btn btn-link">Pozrieť všetky služby →</a>
-      </div>
-
-      <div class="hero-trust">
-        <div><b>25+</b><span>rokov praxe</span></div>
-        <div><b>2,5 km</b><span>od Polusu</span></div>
-        <div><b>0 €</b><span>príplatok za SUV/dodávky</span></div>
-      </div>
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="eyebrow-dot"></span> Autodetailing v Bratislave · od roku 1999</p>
+    <h1 class="hero-title reveal">
+      Vrátime svetlám<br>
+      <span class="accent">a laku ich lesk.</span>
+    </h1>
+    <p class="hero-sub reveal">
+      Zožltnuté svetlomety, zmatnený lak, zanedbaný interiér — dáme vaše auto
+      do kondície, akú malo v deň, keď zišlo z linky.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="tel:+421903379976" class="btn btn-blue">
+        Objednať termín
+        <strong>0903 379 976</strong>
+      </a>
+      <a href="#showcase" class="btn btn-text">Pozrieť prácu ↓</a>
     </div>
 
-    <div class="hero-right">
-      <!-- Before/After slider — skutočná renovácia svetla -->
-      <figure class="ba" id="ba" data-before="img/lightsgal/000.jpg" data-after="img/lightsgal/001.jpg">
-        <div class="ba-label ba-label-left">PRED</div>
-        <div class="ba-label ba-label-right">PO</div>
-        <img class="ba-img ba-before" src="img/lightsgal/000.jpg" alt="Svetlomet pred renováciou" />
-        <div class="ba-after-wrap">
-          <img class="ba-img ba-after" src="img/lightsgal/001.jpg" alt="Svetlomet po renovácii" />
+    <!-- THE wow moment: one large before/after slider -->
+    <figure class="ba reveal" id="heroBa">
+      <img class="ba-img ba-before" src="img/lightsgal/000.jpg" alt="Svetlomet Mercedes pred renováciou — zožltnutý a matný" />
+      <div class="ba-after-wrap">
+        <img class="ba-img ba-after" src="img/lightsgal/001.jpg" alt="Svetlomet Mercedes po renovácii — číry" />
+      </div>
+      <div class="ba-tag ba-tag-l">PRED</div>
+      <div class="ba-tag ba-tag-r">PO</div>
+      <div class="ba-handle" id="heroHandle">
+        <div class="ba-knob">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
         </div>
-        <div class="ba-handle">
-          <span></span>
-          <div class="ba-handle-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
-          </div>
-        </div>
-        <figcaption>Potiahnite za rúčku · Skutočná renovácia z dielne Romana Sabola</figcaption>
+      </div>
+      <figcaption>Skutočná renovácia svetlometu · potiahnite za stred</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE (premium cars, dark) ============ -->
+<section class="showcase" id="showcase">
+  <div class="wrap">
+    <div class="showcase-head">
+      <p class="eyebrow eyebrow-light reveal"><span class="eyebrow-dot"></span> Referencie</p>
+      <h2 class="reveal">Zveria nám aj tie<br><span class="accent-light">najnáročnejšie vozidlá.</span></h2>
+      <p class="showcase-lead reveal">
+        Od rodinného kombi po Mercedes S a Maserati. Rovnaká pozornosť k detailu,
+        rovnaká cena bez príplatku za veľkosť.
+      </p>
+    </div>
+
+    <div class="showcase-grid">
+      <figure class="show-card show-card-big reveal">
+        <img src="img/cover/000.jpg" alt="Mercedes S-Class po detailingu" loading="lazy" />
+        <figcaption>Mercedes S-Class — leštenie & ochrana laku</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="img/cover/003.jpg" alt="Maserati GranTurismo po detailingu" loading="lazy" />
+        <figcaption>Maserati GranTurismo</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="img/cover/001.jpg" alt="Vozidlo po kompletnom detailingu" loading="lazy" />
+        <figcaption>Kompletný detailing</figcaption>
+      </figure>
+      <figure class="show-card reveal">
+        <img src="img/cover/002.jpg" alt="Vozidlo po leštení karosérie" loading="lazy" />
+        <figcaption>Leštenie karosérie</figcaption>
+      </figure>
+      <figure class="show-card show-card-big reveal">
+        <img src="img/cover/004.jpg" alt="Vozidlo po detailingu" loading="lazy" />
+        <figcaption>Hĺbkové leštenie & vosk</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- Marquee of services -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span>RENOVÁCIA SVETIEL</span><i>◆</i>
-    <span>LEŠTENIE KAROSÉRIE</span><i>◆</i>
-    <span>KERAMICKÁ OCHRANA</span><i>◆</i>
-    <span>OZÓNOVÁ DEZINFEKCIA</span><i>◆</i>
-    <span>TEPOVANIE</span><i>◆</i>
-    <span>CLAY ČISTENIE</span><i>◆</i>
-    <span>VOSKOVANIE</span><i>◆</i>
-    <span>ZATIERANIE RÝH</span><i>◆</i>
-    <span>RENOVÁCIA SVETIEL</span><i>◆</i>
-    <span>LEŠTENIE KAROSÉRIE</span><i>◆</i>
-    <span>KERAMICKÁ OCHRANA</span><i>◆</i>
-    <span>OZÓNOVÁ DEZINFEKCIA</span><i>◆</i>
-    <span>TEPOVANIE</span><i>◆</i>
-    <span>CLAY ČISTENIE</span><i>◆</i>
-    <span>VOSKOVANIE</span><i>◆</i>
-    <span>ZATIERANIE RÝH</span><i>◆</i>
-  </div>
-</div>
-
-<!-- POSTUP -->
-<section class="section" id="postup">
-  <div class="section-head reveal">
-    <span class="kicker">Postup</span>
-    <h2>Ako u nás detailing<br>prebieha.</h2>
-    <p>Žiadne prekvapenia. Cena vám sedí pred prácou, nie po nej.</p>
-  </div>
-
-  <ol class="steps">
-    <li class="reveal">
-      <span class="step-num">01</span>
-      <h3>Príjazd a obhliadka</h3>
-      <p>Auto si prevezmem, spoločne prejdeme stav laku, svetiel a interiéru. Poviem, čo má zmysel a čo nie.</p>
-    </li>
-    <li class="reveal">
-      <span class="step-num">02</span>
-      <h3>Cenová ponuka na mieste</h3>
-      <p>Konkrétna cena s rozpisom služieb a časom dokončenia. Bez skrytých príplatkov za väčšie vozidlá.</p>
-    </li>
-    <li class="reveal">
-      <span class="step-num">03</span>
-      <h3>Práca v dielni</h3>
-      <p>Profesionálne stroje a chémia. Krok po kroku — svetlá, lak, interiér, ochrana. Bez kompromisov.</p>
-    </li>
-    <li class="reveal">
-      <span class="step-num">04</span>
-      <h3>Odovzdanie auta</h3>
-      <p>Kontrola spolu s vami. Ak treba, vyzdvihnutie aj do 5 dní. Po dohode aj cez víkend.</p>
-    </li>
-  </ol>
-</section>
-
-<!-- SLUŽBY — workshop menu style -->
-<section class="section section-alt" id="sluzby">
-  <div class="section-head reveal">
-    <span class="kicker">Služby</span>
-    <h2>Kompletný servis pre vaše auto<br>pod jednou strechou.</h2>
-  </div>
-
-  <div class="menu">
-    <!-- Kategória: SVETLÁ -->
-    <div class="menu-cat reveal">
-      <div class="menu-cat-head">
-        <span class="menu-cat-num">A.</span>
-        <h3>Svetlomety</h3>
-      </div>
-      <ul>
-        <li><span>Renovácia plastových svetlometov</span><b>od 60 €</b></li>
-        <li><span>Galéria realizácií</span><b>pozrieť ↓</b></li>
-      </ul>
+<!-- ============ SLUŽBY ============ -->
+<section class="services" id="sluzby">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow reveal"><span class="eyebrow-dot"></span> Služby</p>
+      <h2 class="reveal">Čo pre vaše auto<br>spravíme.</h2>
     </div>
 
-    <!-- Kategória: LAK -->
-    <div class="menu-cat reveal">
-      <div class="menu-cat-head">
-        <span class="menu-cat-num">B.</span>
-        <h3>Karoséria & Lak</h3>
-      </div>
-      <ul>
-        <li><span>Leštenie karosérie (3-stupňové)</span><b>od 120 €</b></li>
-        <li><span>Voskovanie karosérie</span><b>od 40 €</b></li>
-        <li><span>CLAY čistenie laku</span><b>od 50 €</b></li>
-        <li><span>Keramická ochrana laku</span><b>od 250 €</b></li>
-        <li><span>Zatieranie rýh a odrenín</span><b>na ohodnotenie</b></li>
-        <li><span>Odstraňovanie povrchových škrabancov</span><b>od 30 €</b></li>
-        <li><span>Odstraňovanie asfaltu a živice</span><b>od 25 €</b></li>
-        <li><span>PlastiDip</span><b>na ohodnotenie</b></li>
-      </ul>
+    <div class="svc-grid">
+      <article class="svc svc-feat reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18c0-6 5-10 12-10s12 4 12 10"/><ellipse cx="16" cy="18" rx="9" ry="5"/><path d="M16 13v10"/></svg>
+        </div>
+        <h3>Renovácia svetlometov</h3>
+        <p>Naša špecialita. Zo zožltnutých a matných svetiel späť priezračné — bezpečnejšia jazda v noci bez výmeny za nové.</p>
+        <span class="svc-badge">Najžiadanejšie</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 22c2-5 6-8 11-8s9 3 11 8"/><path d="M9 22v3M23 22v3"/><circle cx="16" cy="9" r="3"/></svg>
+        </div>
+        <h3>Leštenie & korekcia laku</h3>
+        <p>Trojstupňové leštenie. Z mikroškrabancov a hologramov zrkadlová hĺbka.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 3l11 5v8c0 7-5 11-11 13C10 27 5 23 5 16V8z"/><path d="M11 16l4 4 7-8"/></svg>
+        </div>
+        <h3>Keramická ochrana</h3>
+        <p>Dlhodobá vrstva. Lesk a ochrana pred UV, soľou a vodným kameňom.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="22" height="14" rx="2"/><path d="M9 11V7h14v4M9 18h14"/></svg>
+        </div>
+        <h3>Čistenie interiéru</h3>
+        <p>Tepovanie čalúnenia, sedadiel, palubnej dosky a batožinového priestoru.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="16" cy="16" r="11"/><path d="M11 16c0-3 2-5 5-5M21 16c0 3-2 5-5 5"/></svg>
+        </div>
+        <h3>Ozónová dezinfekcia</h3>
+        <p>Dezinfekcia interiéru a klimatizácie, odstránenie pachov.</p>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 16l5 5 9-11M22 20l4 4 0-4"/></svg>
+        </div>
+        <h3>Zatieranie rýh & poradenstvo</h3>
+        <p>Lokálne opravy škrabancov aj poradenstvo pri kúpe jazdeného auta.</p>
+      </article>
     </div>
 
-    <!-- Kategória: INTERIÉR -->
-    <div class="menu-cat reveal">
-      <div class="menu-cat-head">
-        <span class="menu-cat-num">C.</span>
-        <h3>Interiér</h3>
-      </div>
+    <div class="svc-extra reveal">
+      <span>Ďalej ponúkame</span>
       <ul>
-        <li><span>Kompletné vysávanie interiéru</span><b>od 20 €</b></li>
-        <li><span>Tepovanie čalúnenia a sedadiel</span><b>od 60 €</b></li>
-        <li><span>Čistenie palubnej dosky a plastov</span><b>v cene tepovania</b></li>
-        <li><span>Batožinový priestor</span><b>od 15 €</b></li>
-        <li><span>Ozónová dezinfekcia interiéru</span><b>od 30 €</b></li>
-        <li><span>Čistenie klimatizácie</span><b>od 25 €</b></li>
-      </ul>
-    </div>
-
-    <!-- Kategória: EXTRA -->
-    <div class="menu-cat reveal">
-      <div class="menu-cat-head">
-        <span class="menu-cat-num">D.</span>
-        <h3>Extra & Poradenstvo</h3>
-      </div>
-      <ul>
-        <li><span>Tekuté stierače (nano povrch okien)</span><b>od 20 €</b></li>
-        <li><span>Renovácia vonkajších plastov</span><b>od 30 €</b></li>
-        <li><span>Meranie hrúbky laku</span><b>15 €</b></li>
-        <li><span>Poradenstvo pri kúpe jazdeného auta</span><b>od 40 €</b></li>
-        <li><span>Údržba veteránov</span><b>na ohodnotenie</b></li>
+        <li>Voskovanie</li><li>CLAY čistenie</li><li>Keramická ochrana plastov</li>
+        <li>Tekuté stierače</li><li>Odstránenie asfaltu & živice</li>
+        <li>PlastiDip</li><li>Meranie hrúbky laku</li><li>Údržba veteránov</li>
       </ul>
     </div>
   </div>
-
-  <p class="menu-note reveal">* Ceny sú orientačné. Konečnú stanovíme po obhliadke podľa rozsahu a stavu vozidla. Bez príplatkov za SUV a dodávky.</p>
 </section>
 
-<!-- GALÉRIA — skutočné pred/po z dielne -->
-<section class="section" id="galeria">
-  <div class="section-head reveal">
-    <span class="kicker">Pred / Po · skutočné realizácie</span>
-    <h2>Výsledok hovorí<br>za nás samý.</h2>
-    <p>Všetky fotky nižšie sú zo skutočných realizácií Romana Sabola. Potiahnutím za rúčku porovnáte stav pred a po.</p>
-  </div>
-
-  <!-- Sekcia: renovácia svetiel -->
-  <div class="gal-cat reveal">
-    <h3><span>A.</span> Renovácia svetlometov</h3>
-  </div>
-  <div class="ba-grid">
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/lightsgal/002.jpg" alt="Pred renováciou" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/003.jpg" alt="Po renovácii" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Renovácia plastového svetla</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/lightsgal/020.jpg" alt="Pred renováciou" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/021.jpg" alt="Po renovácii" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Renovácia plastového svetla</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/lightsgal/040.jpg" alt="Pred renováciou" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/041.jpg" alt="Po renovácii" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Renovácia plastového svetla</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/lightsgal/060.jpg" alt="Pred renováciou" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/061.jpg" alt="Po renovácii" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Renovácia plastového svetla</figcaption>
-    </figure>
-  </div>
-
-  <!-- Sekcia: zatieranie rýh -->
-  <div class="gal-cat reveal" style="margin-top: 60px;">
-    <h3><span>B.</span> Zatieranie rýh a odrenín</h3>
-  </div>
-  <div class="ba-grid">
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/scratchgal/000.jpg" alt="Pred zatieraním" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/001.jpg" alt="Po zatieraní" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Lokálne zatieranie rýh</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/scratchgal/020.jpg" alt="Pred zatieraním" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/021.jpg" alt="Po zatieraní" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Lokálne zatieranie rýh</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/scratchgal/040.jpg" alt="Pred zatieraním" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/041.jpg" alt="Po zatieraní" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Lokálne zatieranie rýh</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/scratchgal/060.jpg" alt="Pred zatieraním" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/061.jpg" alt="Po zatieraní" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>Lokálne zatieranie rýh</figcaption>
-    </figure>
-  </div>
-
-  <!-- Sekcia: leštenie karosérie -->
-  <div class="gal-cat reveal" style="margin-top: 60px;">
-    <h3><span>C.</span> Leštenie karosérie</h3>
-  </div>
-  <div class="ba-grid">
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/shinegal/000.jpg" alt="Pred leštením" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/shinegal/001.jpg" alt="Po leštení" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>3-stupňové leštenie laku</figcaption>
-    </figure>
-
-    <figure class="ba ba-small reveal">
-      <div class="ba-label ba-label-left">PRED</div>
-      <div class="ba-label ba-label-right">PO</div>
-      <img class="ba-img ba-before" src="img/shinegal/004.jpg" alt="Pred leštením" loading="lazy" />
-      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/shinegal/005.jpg" alt="Po leštení" loading="lazy" /></div>
-      <div class="ba-handle"><span></span></div>
-      <figcaption>3-stupňové leštenie laku</figcaption>
-    </figure>
-  </div>
-
-  <p class="ba-note reveal">📷 Toto je len výber — Roman má v archíve <b>vyše 80 párov</b> pred/po svetlometov a <b>desiatky leštení</b>. Plnú galériu rád ukáže osobne v dielni.</p>
-</section>
-
-<!-- COVER strip — 7 fotiek z domovskej stránky -->
-<section class="cover-strip" id="cover">
-  <div class="cover-strip-inner reveal">
-    <span class="kicker">Z dielne</span>
-    <h2>Niečo z bežnej práce.</h2>
-  </div>
-  <div class="cover-row reveal">
-    <div class="cover-item"><img src="img/cover/000.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/001.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/002.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/003.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/004.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/005.jpg" alt="Z dielne" loading="lazy" /></div>
-    <div class="cover-item"><img src="img/cover/006.jpg" alt="Z dielne" loading="lazy" /></div>
-  </div>
-</section>
-
-<!-- CENNÍK — quick combo packages -->
-<section class="section section-alt" id="cennik">
-  <div class="section-head reveal">
-    <span class="kicker">Cenník — balíky</span>
-    <h2>Tri najobľúbenejšie kombinácie.</h2>
-    <p>Pre tých, ktorí chcú jasnú cenu a kompletný výsledok.</p>
-  </div>
-
-  <div class="packs">
-    <article class="pack reveal">
-      <header><span class="pack-tag">Štart</span><h3>Čistý interiér</h3></header>
-      <div class="pack-price"><span>od</span><b>49</b><em>€</em></div>
-      <ul>
-        <li>Vysávanie celého interiéru</li>
-        <li>Čistenie palubnej dosky a plastov</li>
-        <li>Umytie okien zvnútra</li>
-        <li>Voňavka na záver</li>
-      </ul>
-      <a href="tel:+421903379976" class="btn btn-outline">Objednať</a>
-    </article>
-
-    <article class="pack pack-best reveal">
-      <header><span class="pack-tag">Najobľúbenejšie</span><h3>Kompletné detailovanie</h3></header>
-      <div class="pack-price"><span>od</span><b>149</b><em>€</em></div>
-      <ul>
-        <li>Všetko zo „Štart"</li>
-        <li>Tepovanie čalúnenia a sedadiel</li>
-        <li>Leštenie karosérie</li>
-        <li>Voskovanie + ošetrenie plastov</li>
-        <li>Renovácia svetiel (1 pár) v cene</li>
-      </ul>
-      <a href="tel:+421903379976" class="btn btn-dark">Objednať</a>
-    </article>
-
-    <article class="pack reveal">
-      <header><span class="pack-tag">Premium</span><h3>Keramická ochrana</h3></header>
-      <div class="pack-price"><span>od</span><b>349</b><em>€</em></div>
-      <ul>
-        <li>3-stupňové leštenie laku</li>
-        <li>CLAY čistenie</li>
-        <li>Keramická vrstva (dlhodobá)</li>
-        <li>Renovácia svetiel v cene</li>
-        <li>Ošetrenie kolies a plastov</li>
-      </ul>
-      <a href="tel:+421903379976" class="btn btn-outline">Objednať</a>
-    </article>
-  </div>
-</section>
-
-<!-- O ROMANOVI -->
-<section class="section roman" id="roman">
-  <div class="roman-grid">
-    <div class="roman-text reveal">
-      <span class="kicker">O Romanovi</span>
-      <h2>Štvrťstoročie pri jednej remeselnej práci.</h2>
-      <p class="lead">
-        Roman Sabol sa autodetailingu venuje od roku <b>1999</b>. Žiadne franšízy, žiadni brigádnici —
-        každé auto si beriete priamo od človeka, ktorý ho čistil. Práca, na ktorú sa môžete spoľahnúť
-        pri rodinnom kombíku, firemnom SUV aj pri veteránovi.
-      </p>
-      <ul class="roman-list">
-        <li><b>Bez príplatku za väčšie vozidlá</b><span>SUV, MPV, dodávky — rovnaké ceny ako pri osobnom aute.</span></li>
-        <li><b>Možnosť úschovy auta až do 5 dní</b><span>Vyzdvihnete si ho vtedy, keď vám to vyhovuje.</span></li>
-        <li><b>Po dohode aj víkendy</b><span>Vieme sa prispôsobiť vášmu pracovnému tempu.</span></li>
-        <li><b>Špecializácia na veteránov</b><span>Šetrné prípravky a postupy citlivé na originálny lak.</span></li>
-      </ul>
+<!-- ============ PREČO ROMAN ============ -->
+<section class="why" id="preco">
+  <div class="wrap why-grid">
+    <div class="why-left reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Prečo Roman Sabol</p>
+      <div class="why-year"><span data-count="1999">1999</span></div>
+      <p class="why-year-label">rok, odkedy sa venujem jednej jedinej veci — aby vaše auto vyzeralo perfektne.</p>
     </div>
-    <aside class="roman-card reveal">
-      <div class="roman-card-year">
-        <small>NA TRHU OD</small>
-        <strong>1999</strong>
-      </div>
-      <div class="roman-card-meta">
-        <div><b>Lokalita</b>Bratislava, 2,5 km od OC Polus</div>
-        <div><b>Kontakt</b><a href="tel:+421903379976">0903 379 976</a></div>
-        <div><b>Hodiny</b>Po–Pia 8:00–18:00<br>Víkend po dohode</div>
-      </div>
-    </aside>
+    <ul class="why-list">
+      <li class="reveal"><b>Bez príplatku za väčšie vozidlá</b><span>SUV, MPV aj dodávky za rovnakú cenu ako osobné auto.</span></li>
+      <li class="reveal"><b>Úschova auta až 5 dní</b><span>Vyzdvihnete si ho vtedy, keď vám to vyhovuje.</span></li>
+      <li class="reveal"><b>2,5 km od OC Polus</b><span>Pohodlne dostupné z celej Bratislavy. Po dohode aj víkendy.</span></li>
+      <li class="reveal"><b>Práca z ruky majstra</b><span>Žiadni brigádnici — auto preberáte od človeka, ktorý ho robil.</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- KONTAKT -->
-<section class="section contact" id="kontakt">
-  <div class="contact-box reveal">
-    <span class="kicker">Kontakt</span>
-    <h2>Dohodnime termín.</h2>
-    <p>Najrýchlejšie cez telefón. Volajte, napíšte SMS, alebo zastavte priamo v dielni.</p>
-    <a href="tel:+421903379976" class="phone-big">
-      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>0903 379 976</span>
-    </a>
-    <div class="contact-meta">
-      <div><b>Adresa</b>Bratislava — 2,5 km od OC Polus</div>
-      <div><b>Otváracie hodiny</b>Po–Pia 8:00–18:00<br>Víkend po dohode</div>
-      <div><b>Príplatky</b>Žiadne za väčšie vozidlá</div>
+<!-- ============ KONTAKT ============ -->
+<section class="contact" id="kontakt">
+  <div class="wrap contact-inner reveal">
+    <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Kontakt</p>
+    <h2>Dohodnime si termín.</h2>
+    <a href="tel:+421903379976" class="phone-xl">0903 379 976</a>
+    <div class="contact-cols">
+      <div><b>Kde</b>Bratislava<br>2,5 km od OC Polus</div>
+      <div><b>Kedy</b>Po–Pia 8:00–18:00<br>Víkend po dohode</div>
+      <div><b>Príplatky</b>Žiadne za väčšie<br>vozidlá</div>
     </div>
   </div>
 </section>
+
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <strong>Roman Sabol</strong> — autodetailing & renovácia svetiel<br>
-      <small>Na trhu od roku 1999 · Bratislava</small>
-    </div>
-    <div class="footer-right">
-      <a href="tel:+421903379976">0903 379 976</a>
-      <span>© <span id="year"></span> Roman Sabol</span>
-    </div>
+  <div class="wrap footer-inner">
+    <span class="brand-rs">RS</span>
+    <p>Roman Sabol — renovácia svetiel & autodetailing · Bratislava · od 1999</p>
+    <p class="footer-copy">© <span id="year"></span></p>
   </div>
 </footer>
 

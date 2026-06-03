@@ -1,124 +1,87 @@
-// ============ NAV ============
+// ===== NAV =====
 const nav = document.getElementById('nav');
 const burger = document.getElementById('burger');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.getElementById('navLinks');
 
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8));
+
+burger?.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
 });
-
-burger?.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks?.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
+  a.addEventListener('click', () => { burger.classList.remove('open'); navLinks.classList.remove('open'); })
 );
 
-// ============ SMOOTH ANCHORS WITH OFFSET ============
+// ===== Smooth anchors with sticky-nav offset =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (href.length < 2) return;
-    const t = document.querySelector(href);
+    const id = a.getAttribute('href');
+    if (id.length < 2) return;
+    const t = document.querySelector(id);
     if (!t) return;
     e.preventDefault();
-    const top = t.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: 'smooth' });
+    scrollTo({ top: t.getBoundingClientRect().top + scrollY - 72, behavior: 'smooth' });
   });
 });
 
-// ============ REVEAL ON SCROLL ============
+// ===== Reveal on scroll =====
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+}, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// ============ BEFORE / AFTER SLIDERS ============
-function initBA(figure) {
-  const afterWrap = figure.querySelector('.ba-after-wrap');
-  const handle = figure.querySelector('.ba-handle');
-  if (!afterWrap || !handle) return;
+// ===== Before/After slider (single, in hero) =====
+function initBA(fig) {
+  const wrap = fig.querySelector('.ba-after-wrap');
+  const handle = fig.querySelector('.ba-handle');
+  if (!wrap || !handle) return;
 
   let dragging = false;
-  let pct = 50;
-
-  const setPct = (p) => {
-    pct = Math.max(0, Math.min(100, p));
-    afterWrap.style.clipPath = `inset(0 0 0 ${pct}%)`;
-    handle.style.left = `${pct}%`;
+  const set = p => {
+    p = Math.max(0, Math.min(100, p));
+    wrap.style.clipPath = `inset(0 0 0 ${p}%)`;
+    handle.style.left = p + '%';
   };
+  set(50);
 
-  // Init position
-  setPct(50);
-
-  const onMove = (clientX) => {
+  const move = x => {
     if (!dragging) return;
-    const r = figure.getBoundingClientRect();
-    const p = ((clientX - r.left) / r.width) * 100;
-    setPct(p);
+    const r = fig.getBoundingClientRect();
+    set(((x - r.left) / r.width) * 100);
   };
+  const down = x => { dragging = true; wrap.classList.add('dragging'); move(x); };
+  const up = () => { dragging = false; wrap.classList.remove('dragging'); };
 
-  const start = (e) => {
-    dragging = true;
-    afterWrap.classList.add('dragging');
-    e.preventDefault?.();
-  };
-  const end = () => {
-    dragging = false;
-    afterWrap.classList.remove('dragging');
-  };
+  fig.addEventListener('mousedown', e => { e.preventDefault(); down(e.clientX); });
+  addEventListener('mousemove', e => move(e.clientX));
+  addEventListener('mouseup', up);
+  fig.addEventListener('touchstart', e => down(e.touches[0].clientX), { passive: true });
+  addEventListener('touchmove', e => move(e.touches[0].clientX), { passive: true });
+  addEventListener('touchend', up);
 
-  handle.addEventListener('mousedown', start);
-  figure.addEventListener('mousedown', (e) => {
-    if (e.target === handle || handle.contains(e.target)) return;
-    dragging = true;
-    afterWrap.classList.add('dragging');
-    onMove(e.clientX);
-  });
-  window.addEventListener('mousemove', (e) => onMove(e.clientX));
-  window.addEventListener('mouseup', end);
-
-  handle.addEventListener('touchstart', start, { passive: false });
-  figure.addEventListener('touchstart', (e) => {
-    if (e.target === handle || handle.contains(e.target)) return;
-    dragging = true;
-    onMove(e.touches[0].clientX);
-  }, { passive: true });
-  window.addEventListener('touchmove', (e) => onMove(e.touches[0].clientX), { passive: true });
-  window.addEventListener('touchend', end);
-
-  // Subtle auto-demo on hero slider (only once, on first view)
-  if (figure.id === 'ba') {
-    const demoIO = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        demoIO.unobserve(figure);
-        let dir = -1, p = 50;
-        const t = setInterval(() => {
-          p += dir * 1.2;
-          if (p <= 28) dir = 1;
-          if (p >= 72) dir = -1;
-          setPct(p);
-          if (Math.abs(p - 50) < 1 && dir === -1) {
-            clearInterval(t);
-            setPct(50);
-          }
-        }, 20);
-        // Stop demo if user interacts
-        const stop = () => { clearInterval(t); };
-        figure.addEventListener('mousedown', stop, { once: true });
-        figure.addEventListener('touchstart', stop, { once: true });
-      });
-    }, { threshold: 0.4 });
-    demoIO.observe(figure);
-  }
+  // gentle auto-demo on first view
+  const demo = new IntersectionObserver(es => {
+    es.forEach(en => {
+      if (!en.isIntersecting) return;
+      demo.unobserve(fig);
+      let p = 50, dir = 1, steps = 0;
+      const t = setInterval(() => {
+        p += dir * 1.4; steps++;
+        if (p >= 74) dir = -1;
+        if (p <= 30) dir = 1;
+        set(p);
+        if (steps > 70) { clearInterval(t); set(50); }
+      }, 22);
+      const stop = () => clearInterval(t);
+      fig.addEventListener('mousedown', stop, { once: true });
+      fig.addEventListener('touchstart', stop, { once: true });
+    });
+  }, { threshold: 0.45 });
+  demo.observe(fig);
 }
-
 document.querySelectorAll('.ba').forEach(initBA);
 
-// ============ YEAR ============
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// ===== Year =====
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
