@@ -5,6 +5,7 @@
    ===================================================== */
 
 :root {
+  color-scheme: light only;
   --bg: #ffffff;
   --bg-alt: #f4f4f1;
   --bg-dark: #0e0e0e;
@@ -285,30 +286,50 @@ h1 {
   z-index: 1;
 }
 
-/* ===== Placeholder images (CSS-generated until real photos) ===== */
-/* Hero — žltý/zmatnený svetlomet vs čistý */
-.hero-right .ba-before {
-  background:
-    radial-gradient(ellipse 60% 40% at 50% 50%, rgba(180,140,40,0.6), transparent 70%),
-    radial-gradient(ellipse 80% 60% at 30% 40%, #4a3a20 0%, #1a1208 80%),
-    #1a1208;
-}
-.hero-right .ba-after {
-  background:
-    radial-gradient(ellipse 60% 40% at 50% 50%, rgba(220,235,255,0.9), transparent 70%),
-    radial-gradient(ellipse 80% 60% at 30% 40%, #2a3a4f 0%, #0a1422 80%),
-    #0a1422;
-}
+/* ===== Stock fotky áut (Unsplash) — predbežné, kým dodá Roman vlastné ===== */
 
-/* Galéria placeholders */
-.ba-svetlo-1 { background: radial-gradient(ellipse at 50% 50%, #a68a4a 0%, #2a1f0a 80%); }
-.ba-svetlo-1-po { background: radial-gradient(ellipse at 50% 50%, #d8e4f0 0%, #1a2838 80%); clip-path: inset(0 0 0 50%); }
-.ba-lak-1 { background: linear-gradient(135deg, #4a4a4a, #2a2a2a 60%, #1a1a1a); }
-.ba-lak-1-po { background: linear-gradient(135deg, #0066cc, #003d80 50%, #001a40); clip-path: inset(0 0 0 50%); }
-.ba-int-1 { background: linear-gradient(135deg, #3a342a, #1a1612); }
-.ba-int-1-po { background: linear-gradient(135deg, #c8c0b0, #6a6056); clip-path: inset(0 0 0 50%); }
-.ba-svetlo-2 { background: radial-gradient(ellipse at 50% 50%, #8a7035 0%, #2a200a 80%); }
-.ba-svetlo-2-po { background: radial-gradient(ellipse at 50% 50%, #e5edf5 0%, #1f2c3a 80%); clip-path: inset(0 0 0 50%); }
+/* Hero — pre/po (rovnaká fotka, filter robí "pred" verziu zanedbanú) */
+.hero-right .ba-before,
+.hero-right .ba-after {
+  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover; background-position: center;
+  background-color: #2a2a2a;
+}
+.hero-right .ba-before { filter: sepia(0.65) saturate(1.4) brightness(0.7) contrast(0.95) blur(0.5px); }
+.hero-right .ba-after  { filter: brightness(1.05) contrast(1.15) saturate(1.1); }
+
+/* Galéria — 4 rôzne reálne fotky áut */
+.ba-svetlo-1, .ba-svetlo-1-po {
+  background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80');
+  background-size: cover; background-position: center;
+  background-color: #1a1a1a;
+}
+.ba-svetlo-1     { filter: sepia(0.75) brightness(0.65) contrast(0.95) blur(0.5px); }
+.ba-svetlo-1-po  { clip-path: inset(0 0 0 50%); filter: brightness(1.05) contrast(1.15) saturate(1.1); }
+
+.ba-lak-1, .ba-lak-1-po {
+  background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80');
+  background-size: cover; background-position: center;
+  background-color: #2a2a2a;
+}
+.ba-lak-1        { filter: grayscale(0.6) brightness(0.55) contrast(0.95) blur(0.5px); }
+.ba-lak-1-po     { clip-path: inset(0 0 0 50%); filter: brightness(1.05) contrast(1.15) saturate(1.25); }
+
+.ba-int-1, .ba-int-1-po {
+  background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=80');
+  background-size: cover; background-position: center;
+  background-color: #1a1a1a;
+}
+.ba-int-1        { filter: sepia(0.5) brightness(0.55) contrast(0.95) blur(0.5px); }
+.ba-int-1-po     { clip-path: inset(0 0 0 50%); filter: brightness(1.1) contrast(1.1) saturate(1.1); }
+
+.ba-svetlo-2, .ba-svetlo-2-po {
+  background-image: url('https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?auto=format&fit=crop&w=900&q=80');
+  background-size: cover; background-position: center;
+  background-color: #1a1a1a;
+}
+.ba-svetlo-2     { filter: sepia(0.7) brightness(0.6) contrast(0.95) blur(0.5px); }
+.ba-svetlo-2-po  { clip-path: inset(0 0 0 50%); filter: brightness(1.1) contrast(1.1) saturate(1.15); }
 
 .ba-small { aspect-ratio: 4/3; }
 .ba-small .ba-handle span { width: 36px; height: 36px; }
