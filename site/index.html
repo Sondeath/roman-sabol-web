@@ -82,20 +82,21 @@
     </div>
 
     <div class="hero-right">
-      <!-- Before/After slider for headlight -->
-      <figure class="ba" id="ba">
+      <!-- Before/After slider — skutočná renovácia svetla -->
+      <figure class="ba" id="ba" data-before="img/lightsgal/000.jpg" data-after="img/lightsgal/001.jpg">
         <div class="ba-label ba-label-left">PRED</div>
         <div class="ba-label ba-label-right">PO</div>
-        <div class="ba-img ba-before"></div>
-        <div class="ba-img ba-after" id="baAfter">
-          <div class="ba-handle" id="baHandle">
-            <span></span>
-            <div class="ba-handle-icon">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
-            </div>
+        <img class="ba-img ba-before" src="img/lightsgal/000.jpg" alt="Svetlomet pred renováciou" />
+        <div class="ba-after-wrap">
+          <img class="ba-img ba-after" src="img/lightsgal/001.jpg" alt="Svetlomet po renovácii" />
+        </div>
+        <div class="ba-handle">
+          <span></span>
+          <div class="ba-handle-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
           </div>
         </div>
-        <figcaption>Potiahnite za rúčku · Skutočný príklad renovácie</figcaption>
+        <figcaption>Potiahnite za rúčku · Skutočná renovácia z dielne Romana Sabola</figcaption>
       </figure>
     </div>
   </div>
@@ -228,48 +229,140 @@
   <p class="menu-note reveal">* Ceny sú orientačné. Konečnú stanovíme po obhliadke podľa rozsahu a stavu vozidla. Bez príplatkov za SUV a dodávky.</p>
 </section>
 
-<!-- GALÉRIA — multiple before/after sliders -->
+<!-- GALÉRIA — skutočné pred/po z dielne -->
 <section class="section" id="galeria">
   <div class="section-head reveal">
-    <span class="kicker">Pred / Po</span>
-    <h2>Najlepšia reklama —<br>výsledok pred a po.</h2>
+    <span class="kicker">Pred / Po · skutočné realizácie</span>
+    <h2>Výsledok hovorí<br>za nás samý.</h2>
+    <p>Všetky fotky nižšie sú zo skutočných realizácií Romana Sabola. Potiahnutím za rúčku porovnáte stav pred a po.</p>
   </div>
 
+  <!-- Sekcia: renovácia svetiel -->
+  <div class="gal-cat reveal">
+    <h3><span>A.</span> Renovácia svetlometov</h3>
+  </div>
   <div class="ba-grid">
-    <figure class="ba ba-small reveal" data-ba>
+    <figure class="ba ba-small reveal">
       <div class="ba-label ba-label-left">PRED</div>
       <div class="ba-label ba-label-right">PO</div>
-      <div class="ba-img ba-before ba-svetlo-1"></div>
-      <div class="ba-img ba-after ba-svetlo-1-po"><div class="ba-handle"><span></span></div></div>
-      <figcaption>Renovácia svetla — VW Passat</figcaption>
+      <img class="ba-img ba-before" src="img/lightsgal/002.jpg" alt="Pred renováciou" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/003.jpg" alt="Po renovácii" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Renovácia plastového svetla</figcaption>
     </figure>
 
-    <figure class="ba ba-small reveal" data-ba>
+    <figure class="ba ba-small reveal">
       <div class="ba-label ba-label-left">PRED</div>
       <div class="ba-label ba-label-right">PO</div>
-      <div class="ba-img ba-before ba-lak-1"></div>
-      <div class="ba-img ba-after ba-lak-1-po"><div class="ba-handle"><span></span></div></div>
-      <figcaption>Leštenie laku — Škoda Octavia</figcaption>
+      <img class="ba-img ba-before" src="img/lightsgal/020.jpg" alt="Pred renováciou" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/021.jpg" alt="Po renovácii" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Renovácia plastového svetla</figcaption>
     </figure>
 
-    <figure class="ba ba-small reveal" data-ba>
+    <figure class="ba ba-small reveal">
       <div class="ba-label ba-label-left">PRED</div>
       <div class="ba-label ba-label-right">PO</div>
-      <div class="ba-img ba-before ba-int-1"></div>
-      <div class="ba-img ba-after ba-int-1-po"><div class="ba-handle"><span></span></div></div>
-      <figcaption>Tepovanie sedadla — BMW</figcaption>
+      <img class="ba-img ba-before" src="img/lightsgal/040.jpg" alt="Pred renováciou" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/041.jpg" alt="Po renovácii" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Renovácia plastového svetla</figcaption>
     </figure>
 
-    <figure class="ba ba-small reveal" data-ba>
+    <figure class="ba ba-small reveal">
       <div class="ba-label ba-label-left">PRED</div>
       <div class="ba-label ba-label-right">PO</div>
-      <div class="ba-img ba-before ba-svetlo-2"></div>
-      <div class="ba-img ba-after ba-svetlo-2-po"><div class="ba-handle"><span></span></div></div>
-      <figcaption>Renovácia svetla — Ford Focus</figcaption>
+      <img class="ba-img ba-before" src="img/lightsgal/060.jpg" alt="Pred renováciou" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/lightsgal/061.jpg" alt="Po renovácii" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Renovácia plastového svetla</figcaption>
     </figure>
   </div>
 
-  <p class="ba-note reveal">📷 Plnú galériu (renovácia svetiel · zatieranie rýh · leštenie) ukážem osobne v dielni.</p>
+  <!-- Sekcia: zatieranie rýh -->
+  <div class="gal-cat reveal" style="margin-top: 60px;">
+    <h3><span>B.</span> Zatieranie rýh a odrenín</h3>
+  </div>
+  <div class="ba-grid">
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/scratchgal/000.jpg" alt="Pred zatieraním" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/001.jpg" alt="Po zatieraní" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Lokálne zatieranie rýh</figcaption>
+    </figure>
+
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/scratchgal/020.jpg" alt="Pred zatieraním" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/021.jpg" alt="Po zatieraní" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Lokálne zatieranie rýh</figcaption>
+    </figure>
+
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/scratchgal/040.jpg" alt="Pred zatieraním" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/041.jpg" alt="Po zatieraní" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Lokálne zatieranie rýh</figcaption>
+    </figure>
+
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/scratchgal/060.jpg" alt="Pred zatieraním" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/scratchgal/061.jpg" alt="Po zatieraní" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>Lokálne zatieranie rýh</figcaption>
+    </figure>
+  </div>
+
+  <!-- Sekcia: leštenie karosérie -->
+  <div class="gal-cat reveal" style="margin-top: 60px;">
+    <h3><span>C.</span> Leštenie karosérie</h3>
+  </div>
+  <div class="ba-grid">
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/shinegal/000.jpg" alt="Pred leštením" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/shinegal/001.jpg" alt="Po leštení" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>3-stupňové leštenie laku</figcaption>
+    </figure>
+
+    <figure class="ba ba-small reveal">
+      <div class="ba-label ba-label-left">PRED</div>
+      <div class="ba-label ba-label-right">PO</div>
+      <img class="ba-img ba-before" src="img/shinegal/004.jpg" alt="Pred leštením" loading="lazy" />
+      <div class="ba-after-wrap"><img class="ba-img ba-after" src="img/shinegal/005.jpg" alt="Po leštení" loading="lazy" /></div>
+      <div class="ba-handle"><span></span></div>
+      <figcaption>3-stupňové leštenie laku</figcaption>
+    </figure>
+  </div>
+
+  <p class="ba-note reveal">📷 Toto je len výber — Roman má v archíve <b>vyše 80 párov</b> pred/po svetlometov a <b>desiatky leštení</b>. Plnú galériu rád ukáže osobne v dielni.</p>
+</section>
+
+<!-- COVER strip — 7 fotiek z domovskej stránky -->
+<section class="cover-strip" id="cover">
+  <div class="cover-strip-inner reveal">
+    <span class="kicker">Z dielne</span>
+    <h2>Niečo z bežnej práce.</h2>
+  </div>
+  <div class="cover-row reveal">
+    <div class="cover-item"><img src="img/cover/000.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/001.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/002.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/003.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/004.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/005.jpg" alt="Z dielne" loading="lazy" /></div>
+    <div class="cover-item"><img src="img/cover/006.jpg" alt="Z dielne" loading="lazy" /></div>
+  </div>
 </section>
 
 <!-- CENNÍK — quick combo packages -->

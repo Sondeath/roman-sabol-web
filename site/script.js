@@ -38,16 +38,16 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // ============ BEFORE / AFTER SLIDERS ============
 function initBA(figure) {
-  const after = figure.querySelector('.ba-after');
+  const afterWrap = figure.querySelector('.ba-after-wrap');
   const handle = figure.querySelector('.ba-handle');
-  if (!after || !handle) return;
+  if (!afterWrap || !handle) return;
 
   let dragging = false;
   let pct = 50;
 
   const setPct = (p) => {
     pct = Math.max(0, Math.min(100, p));
-    after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    afterWrap.style.clipPath = `inset(0 0 0 ${pct}%)`;
     handle.style.left = `${pct}%`;
   };
 
@@ -63,19 +63,19 @@ function initBA(figure) {
 
   const start = (e) => {
     dragging = true;
-    after.classList.add('dragging');
+    afterWrap.classList.add('dragging');
     e.preventDefault?.();
   };
   const end = () => {
     dragging = false;
-    after.classList.remove('dragging');
+    afterWrap.classList.remove('dragging');
   };
 
   handle.addEventListener('mousedown', start);
   figure.addEventListener('mousedown', (e) => {
     if (e.target === handle || handle.contains(e.target)) return;
     dragging = true;
-    after.classList.add('dragging');
+    afterWrap.classList.add('dragging');
     onMove(e.clientX);
   });
   window.addEventListener('mousemove', (e) => onMove(e.clientX));

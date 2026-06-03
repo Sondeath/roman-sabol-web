@@ -255,13 +255,18 @@ h1 {
 
 .ba-img {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
-.ba-after {
+.ba-after-wrap {
+  position: absolute; inset: 0;
   clip-path: inset(0 0 0 50%);
   transition: clip-path 0.1s linear;
+  overflow: hidden;
 }
-.ba-after.dragging { transition: none; }
+.ba-after-wrap.dragging { transition: none; }
 
 .ba-handle {
   position: absolute; top: 0; bottom: 0; left: 50%;
@@ -286,50 +291,61 @@ h1 {
   z-index: 1;
 }
 
-/* ===== Stock fotky áut (Unsplash) — predbežné, kým dodá Roman vlastné ===== */
-
-/* Hero — pre/po (rovnaká fotka, filter robí "pred" verziu zanedbanú) */
-.hero-right .ba-before,
-.hero-right .ba-after {
-  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80');
-  background-size: cover; background-position: center;
-  background-color: #2a2a2a;
+/* ===== Galéria kategórie ===== */
+.gal-cat {
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
 }
-.hero-right .ba-before { filter: sepia(0.65) saturate(1.4) brightness(0.7) contrast(0.95) blur(0.5px); }
-.hero-right .ba-after  { filter: brightness(1.05) contrast(1.15) saturate(1.1); }
-
-/* Galéria — 4 rôzne reálne fotky áut */
-.ba-svetlo-1, .ba-svetlo-1-po {
-  background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80');
-  background-size: cover; background-position: center;
-  background-color: #1a1a1a;
+.gal-cat h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
-.ba-svetlo-1     { filter: sepia(0.75) brightness(0.65) contrast(0.95) blur(0.5px); }
-.ba-svetlo-1-po  { clip-path: inset(0 0 0 50%); filter: brightness(1.05) contrast(1.15) saturate(1.1); }
-
-.ba-lak-1, .ba-lak-1-po {
-  background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80');
-  background-size: cover; background-position: center;
-  background-color: #2a2a2a;
+.gal-cat h3 span {
+  color: var(--accent);
+  margin-right: 12px;
 }
-.ba-lak-1        { filter: grayscale(0.6) brightness(0.55) contrast(0.95) blur(0.5px); }
-.ba-lak-1-po     { clip-path: inset(0 0 0 50%); filter: brightness(1.05) contrast(1.15) saturate(1.25); }
 
-.ba-int-1, .ba-int-1-po {
-  background-image: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=80');
-  background-size: cover; background-position: center;
-  background-color: #1a1a1a;
+/* ===== Cover strip — výber zo skutočných fotiek dielne ===== */
+.cover-strip {
+  background: var(--ink);
+  color: #fff;
+  padding: 80px 0 100px;
 }
-.ba-int-1        { filter: sepia(0.5) brightness(0.55) contrast(0.95) blur(0.5px); }
-.ba-int-1-po     { clip-path: inset(0 0 0 50%); filter: brightness(1.1) contrast(1.1) saturate(1.1); }
-
-.ba-svetlo-2, .ba-svetlo-2-po {
-  background-image: url('https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?auto=format&fit=crop&w=900&q=80');
-  background-size: cover; background-position: center;
-  background-color: #1a1a1a;
+.cover-strip-inner {
+  max-width: 1320px; margin: 0 auto;
+  padding: 0 24px 32px;
 }
-.ba-svetlo-2     { filter: sepia(0.7) brightness(0.6) contrast(0.95) blur(0.5px); }
-.ba-svetlo-2-po  { clip-path: inset(0 0 0 50%); filter: brightness(1.1) contrast(1.1) saturate(1.15); }
+.cover-strip h2 { color: #fff; }
+.cover-row {
+  display: flex;
+  gap: 16px;
+  padding: 0 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.cover-row::-webkit-scrollbar { height: 6px; }
+.cover-row::-webkit-scrollbar-thumb { background: var(--accent); }
+.cover-item {
+  flex: 0 0 320px;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: #0a0a0a;
+}
+.cover-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.cover-item:hover img { transform: scale(1.06); }
+@media (max-width: 720px) {
+  .cover-item { flex-basis: 80vw; }
+}
 
 .ba-small { aspect-ratio: 4/3; }
 .ba-small .ba-handle span { width: 36px; height: 36px; }
