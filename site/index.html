@@ -4,10 +4,29 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
+<meta name="theme-color" content="#07142e" />
 <title>Roman Sabol — Renovácia svetiel & Autodetailing | Bratislava od 1999</title>
 <meta name="description" content="Renovácia zožltnutých svetlometov, leštenie laku, keramická ochrana a kompletný detailing áut v Bratislave. Od roku 1999. Aj prémiové vozidlá." />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="sk_SK" />
+<meta property="og:title" content="Roman Sabol — Renovácia svetiel & Autodetailing" />
+<meta property="og:description" content="Zožltnuté svetlomety a zmatnený lak späť do kondície. Bratislava, od roku 1999. Aj prémiové vozidlá." />
+<meta property="og:url" content="https://roman-sabol-web.pages.dev/" />
+<meta property="og:image" content="https://roman-sabol-web.pages.dev/img/cover/000.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Roman Sabol — Renovácia svetiel & Autodetailing" />
+<meta name="twitter:description" content="Zožltnuté svetlomety a zmatnený lak späť do kondície. Bratislava, od roku 1999." />
+<meta name="twitter:image" content="https://roman-sabol-web.pages.dev/img/cover/000.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/lightsgal/000.jpg" />
+<link rel="preload" as="image" href="img/lightsgal/001.jpg" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
@@ -35,25 +54,32 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="eyebrow-dot"></span> Autodetailing v Bratislave · od roku 1999</p>
-    <h1 class="hero-title reveal">
-      Vrátime svetlám<br>
-      <span class="accent">a laku ich lesk.</span>
-    </h1>
-    <p class="hero-sub reveal">
-      Zožltnuté svetlomety, zmatnený lak, zanedbaný interiér — dáme vaše auto
-      do kondície, akú malo v deň, keď zišlo z linky.
-    </p>
-    <div class="hero-actions reveal">
-      <a href="tel:+421903379976" class="btn btn-blue">
-        Objednať termín
-        <strong>0903 379 976</strong>
-      </a>
-      <a href="#showcase" class="btn btn-text">Pozrieť prácu ↓</a>
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <p class="eyebrow reveal"><span class="eyebrow-dot"></span> Autodetailing v Bratislave · od roku 1999</p>
+      <h1 class="hero-title reveal">
+        Vrátime svetlám<br>
+        <span class="accent">a laku ich lesk.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Zožltnuté svetlomety, zmatnený lak, zanedbaný interiér — dáme vaše auto
+        do kondície, akú malo v deň, keď zišlo z linky.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="tel:+421903379976" class="btn btn-blue">
+          Objednať termín
+          <strong>0903 379 976</strong>
+        </a>
+        <a href="#showcase" class="btn btn-text">Pozrieť prácu ↓</a>
+      </div>
+      <dl class="hero-stats reveal">
+        <div><dt>25+</dt><dd>rokov praxe</dd></div>
+        <div><dt>2,5 km</dt><dd>od OC Polus</dd></div>
+        <div><dt>0 €</dt><dd>príplatok za veľkosť</dd></div>
+      </dl>
     </div>
 
-    <!-- THE wow moment: one large before/after slider -->
+    <!-- THE wow moment: one before/after slider, crisp (native scale) -->
     <figure class="ba reveal" id="heroBa">
       <img class="ba-img ba-before" src="img/lightsgal/000.jpg" alt="Svetlomet Mercedes pred renováciou — zožltnutý a matný" />
       <div class="ba-after-wrap">
@@ -218,6 +244,12 @@
     <p class="footer-copy">© <span id="year"></span></p>
   </div>
 </footer>
+
+<!-- Plávajúce volanie (mobil) -->
+<a href="tel:+421903379976" class="fab" id="fab" aria-label="Zavolať 0903 379 976">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <span>Zavolať</span>
+</a>
 
 <script src="script.js"></script>
 </body>

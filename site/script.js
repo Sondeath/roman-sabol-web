@@ -82,6 +82,21 @@ function initBA(fig) {
 }
 document.querySelectorAll('.ba').forEach(initBA);
 
+// ===== Fade photos in once decoded =====
+document.querySelectorAll('.ba-img, .show-card img').forEach(img => {
+  if (img.complete && img.naturalWidth) img.classList.add('loaded');
+  else img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
+});
+
+// ===== Mobile floating call button: show after leaving hero =====
+const fab = document.getElementById('fab');
+if (fab) {
+  const trigger = document.querySelector('.hero');
+  new IntersectionObserver(es => {
+    es.forEach(en => fab.classList.toggle('show', !en.isIntersecting));
+  }, { threshold: 0, rootMargin: '-60% 0px 0px 0px' }).observe(trigger);
+}
+
 // ===== Year =====
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
